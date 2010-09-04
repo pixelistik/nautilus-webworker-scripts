@@ -7,5 +7,6 @@ for file in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
 do
 	tempfilenumber=$RANDOM
 	curl -F uploaded_file=@"$file" http://validator.w3.org/check>/tmp/w3-checkresult$tempfilenumber.html
+	cat /tmp/w3-checkresult$tempfilenumber.html|sed -e 's/<head>/<head><base href\="http:\/\/validator.w3.org\/check">/'>/tmp/w3-checkresult$tempfilenumber.html
 	gnome-open /tmp/w3-checkresult$tempfilenumber.html
 done
