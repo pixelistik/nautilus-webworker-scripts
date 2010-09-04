@@ -1,0 +1,11 @@
+#!/bin/bash
+stopit=0
+if [[ -w combined.css ]]
+then
+	zenity --question --text "Overwrite File combined.css?"
+	stopit=$(echo $?)
+fi
+if [[ $stopit == 0 ]]
+then
+	cat $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS|java -jar ~/bin/yuicompressor-2.4.2/build/yuicompressor-2.4.2.jar --type css -o combined.css
+fi
