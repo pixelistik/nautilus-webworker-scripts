@@ -1,0 +1,9 @@
+h2. Webworker Scripts for Nautilus
+
+Nautilus' right-click-menu can be easily extended by adding scripts to the nautilus-scripts folder.
+
+This is a repository for things we made and considered helpful.
+
+License: "GPL3 or later":http://www.gnu.org/licenses/gpl.html
+
+
