@@ -1,9 +1,17 @@
 h2. Webworker Scripts for Nautilus
-
 Nautilus' right-click-menu can be easily extended by adding scripts to the nautilus-scripts folder.
 
 This is a repository for things we made and considered helpful.
 
 License: "GPL3 or later":http://www.gnu.org/licenses/gpl.html
 
+h3. Installation
+Copy the scripts you need into ~/.gnome2/nautilus-scripts
 
+For the _YUI Compressor_ scripts, you need to "download YUI compressor":http://developer.yahoo.com/yui/compressor/ and adjust the path to the executable .jar in the scripts.
+
+h3. The Scripts
+h4. Minify and combine CSS/JS
+This script will combine all selected CSS or JS files and minify them using the YUI compressor. The result will be saved as combined.css or combined.js. If that file already exists, you will be asked if you want to overwrite it.
+h4. W3 validate HTML
+This script will upload(!) all selected files to http://validator.w3.org/ to get them checked for markup validity. The result page will be opened in the system browser.
