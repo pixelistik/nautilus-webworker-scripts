@@ -1,0 +1,6 @@
+#!/bin/bash
+IFS=$'\n'
+for file in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+do
+	convert "$file" "$file.png"
+done
