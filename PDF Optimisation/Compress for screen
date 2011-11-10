@@ -1,0 +1,9 @@
+#!/bin/bash
+# Compress a PDF file for screen quality, e.g. for download situations.
+# See http://www.econowics.com/tips-n-tricks/172/convert-jpg-jpeg-files-into-acrobat-pdf-in-ubuntu-linux/
+IFS=$'\n'
+for file in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+do
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$file-screen.pdf" "$file"
+
+done
